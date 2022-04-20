@@ -24,17 +24,16 @@ public class App extends Application {
         stage.setTitle("Hello world!");
         stage.setHeight(300);
         stage.setWidth(500);
-
+        setUserAgentStylesheet(STYLESHEET_CASPIAN);
         VBox vBox = new VBox();
         Text msg = new Text("Hello World!");
         Text msg1 = new Text("Hello javafx!");
-
-        vBox.getChildren().addAll(msg, msg1);
+        Button button = new Button("Click me!");
+        vBox.getChildren().addAll(msg, msg1, button);
 
         Scene scene = new Scene(vBox);
         stage.setScene(scene);
         stage.show();
-
 
     }
 
