@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,17 +21,21 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(event -> System.out.println("Hello World!"));
-        StackPane stackPane = new StackPane();
-        stackPane.getChildren().add(btn);
-        scene = new Scene(stackPane, 300, 250);
+        stage.setTitle("Hello world!");
+        stage.setHeight(300);
+        stage.setWidth(500);
+
+        VBox vBox = new VBox();
+        Text msg = new Text("Hello World!");
+        Text msg1 = new Text("Hello javafx!");
+
+        vBox.getChildren().addAll(msg, msg1);
+
+        Scene scene = new Scene(vBox);
         stage.setScene(scene);
         stage.show();
-        // scene = new Scene(loadFXML("primary"), 640, 480);
-        // stage.setScene(scene);
-        // stage.show();
+
+
     }
 
     static void setRoot(String fxml) throws IOException {
