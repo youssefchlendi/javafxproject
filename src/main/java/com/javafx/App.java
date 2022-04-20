@@ -24,11 +24,14 @@ public class App extends Application {
         stage.setTitle("Hello world!");
         stage.setHeight(300);
         stage.setWidth(500);
-        setUserAgentStylesheet(STYLESHEET_CASPIAN);
         VBox vBox = new VBox();
+        vBox.setStyle("-fx-background-color: #336699;");
         Text msg = new Text("Hello World!");
+        msg.setStyle("-fx-font-size: 24px;");
         Text msg1 = new Text("Hello javafx!");
+        msg1.setStyle("-fx-font-weight: bold ;");
         Button button = new Button("Click me!");
+        button.setStyle("-fx-background-color: #bada55;");
         vBox.getChildren().addAll(msg, msg1, button);
 
         Scene scene = new Scene(vBox);
