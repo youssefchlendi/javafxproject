@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -21,22 +23,18 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        stage.setTitle("Hello world!");
-        stage.setHeight(300);
-        stage.setWidth(500);
         VBox vBox = new VBox();
-        vBox.setStyle("-fx-background-color: #336699;");
-        Text msg = new Text("Hello World!");
-        msg.setStyle("-fx-font-size: 24px;");
-        Text msg1 = new Text("Hello javafx!");
-        msg1.setStyle("-fx-font-weight: bold ;");
-        Button button = new Button("Click me!");
-        button.setStyle("-fx-background-color: #bada55;");
-        vBox.getChildren().addAll(msg, msg1, button);
 
         Scene scene = new Scene(vBox);
         stage.setScene(scene);
         stage.show();
+
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        Label label = new Label("Hello World");
+        TextField textField = new TextField();
+        vBox.getChildren().addAll(label,textField);
+
+        
 
     }
 

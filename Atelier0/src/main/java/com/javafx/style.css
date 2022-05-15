@@ -1,0 +1,23 @@
+.button {
+    -fx-text-fill : white ;
+    -fx-font-family : Arial ;
+    -fx-fon-weight : bold ;
+    -fx-background-color : linear-gradient(#61a2b1, #2A5058);
+    -fx-effect : dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-padding : 10 20 10 20;
+    -fx-background-radius : 16px
+}
+
+.text-field{
+    -fx-background-color : white ;
+    -fx-effect : dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-padding : 10 20 10 20;
+    -fx-background-radius : 16px
+}
+
+.grid{
+    -fx-spacing : 10 ;
+    -fx-alignment : center ;
+    -fx-background-color : red;
+    -fx-grid-lines-visible : true ;
+}
