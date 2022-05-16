@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<!-- <?import javafx.scene.layout.padding?> -->
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleGroup?>
+<VBox  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.sampleController" fx:id="bx">
+
+	<padding>
+		<Insets>
+			<right>75</right>
+			<bottom>75</bottom>
+			<left>150</left>
+		</Insets>
+	</padding>
+	<HBox>
+		<padding>
+			<Insets>
+				<top>100</top>
+				<right>75</right>
+				<bottom>75</bottom>
+				<left>10</left>
+			</Insets>
+		</padding>
+		<Button text="Red" onAction="#red" />
+		<Button text="Green" onAction="#green"/>
+		<Button text="Blue" onAction="#blue"/>
+	</HBox>
+
+</VBox>
