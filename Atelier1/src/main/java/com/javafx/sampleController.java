@@ -15,5 +15,26 @@ TextField tfName;
     @FXML
     private void sayHello() throws IOException {
         lMessage.setText("Hello "+tfName.getText());
+        // gMessage.setText("");
     }
+    
+    @FXML
+    private void switchToGoodBye() throws IOException {
+        App.setRoot("goodbye");
+    }
+
+    @FXML
+    private void switchToHello() throws IOException {
+        App.setRoot("sample");
+    }
+
+    @FXML
+    Label gMessage;
+
+    @FXML
+    private void sayGoodbye() {
+        gMessage.setText("Goodbye "+tfName.getText());
+        lMessage.setText("");
+    }
+    
 }
