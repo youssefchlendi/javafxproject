@@ -3,6 +3,7 @@ package com.javafx;
 import java.io.IOException;
 import java.util.function.Function;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -26,18 +27,17 @@ public class sampleController {
 
 
     @FXML
-    public void red() {
+    public void colorier(ActionEvent e) {
         // set bg color to red
-        bx.setStyle("-fx-background-color: red");
-    }
-
-    @FXML
-    public void blue() {
-        bx.setStyle("-fx-background-color: blue");
-    }
-
-    @FXML
-    public void green() {
-        bx.setStyle("-fx-background-color: green");
+        if(e.getSource()==b1)
+        {
+        	bx.setStyle("-fx-background-color: red");
+        }else if(e.getSource()==b2)
+        {
+        	bx.setStyle("-fx-background-color: green");
+        }else if(e.getSource()==b3)
+        {
+        	bx.setStyle("-fx-background-color: blue");
+        }
     }
 }
