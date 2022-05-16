@@ -18,7 +18,13 @@ public class sampleController {
 
     @FXML
     public void app() {
-        ml.setText("You selected " + ((RadioButton) filGroup.getSelectedToggle()).getText());
-        ml.setStyle("-fx-text-fill: "+((RadioButton) filGroup.getSelectedToggle()).getText()+";");
+        // check if filGroup is null
+        if (filGroup.getSelectedToggle() == null) {
+            ml.setText("Please select a radio button");
+            return;
+        } else {
+            ml.setText("You selected " + ((RadioButton) filGroup.getSelectedToggle()).getText());
+            ml.setStyle("-fx-text-fill: "+((RadioButton) filGroup.getSelectedToggle()).getText()+";");
+        }
     }
 }
