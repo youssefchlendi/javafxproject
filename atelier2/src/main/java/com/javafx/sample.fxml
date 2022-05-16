@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
-<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.geometry.Insets?>
 <!-- <?import javafx.scene.layout.padding?> -->
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Button?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.sampleController">
-	<!-- TODO Add Nodes -->
-	<HBox spacing="10">
-		<padding>
-			<Insets left="20" right="20" top="20" bottom="20"></Insets>
-		</padding>
-		<Label text="your name " fx:id="lab1"></Label>
-		<TextField fx:id="tfName"></TextField>
-	</HBox>
-	<HBox spacing="10">
-		<padding>
-			<Insets left="20" right="20" top="20" bottom="20">
-			</Insets>
-		</padding>
-		<Button text="Say hello!" onAction="#sayHello"></Button>
-		<Label fx:id="lMessage" id="mess"></Label>
-	</HBox>
-	<HBox spacing="10">
-		<Button text="switch to Goodbye" onAction="#switchToGoodBye"></Button>
-	</HBox>
-</VBox>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" vgap="30" hgap="30" fx:controller="com.javafx.sampleController">
+	<padding>
+		<Insets>
+			<top>30</top>
+			<right>30</right>
+			<bottom>30</bottom>
+			<left>30</left>
+		</Insets>
+	</padding>
+	<Label text="UserName:"  GridPane.rowIndex="0" 
+		GridPane.columnIndex="0" 
+	/>
+	<TextField fx:id="username" promptText="Votre login" GridPane.rowIndex="0" 
+		GridPane.columnIndex="1"
+	/>
+	<Label text="Password:"  GridPane.rowIndex="1" 
+		GridPane.columnIndex="0"
+	/>
+	<PasswordField fx:id="password" promptText="Votre mot de passe" GridPane.rowIndex="1" 
+		GridPane.columnIndex="1"
+	/>
+
+	<Label fx:id="err" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+		<Button text="OK" onAction="#login"  GridPane.rowIndex="3" GridPane.columnIndex="0" />
+		<Button text="Cancel" onAction="#cancel" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+
+</GridPane>
