@@ -13,7 +13,7 @@
 		<padding>
 			<Insets left="20" right="20" top="20" bottom="20"></Insets>
 		</padding>
-		<Label text="your name "></Label>
+		<Label text="your name " fx:id="lab1"></Label>
 		<TextField fx:id="tfName"></TextField>
 	</HBox>
 	<HBox spacing="10">
