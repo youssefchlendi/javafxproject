@@ -17,15 +17,11 @@ public class App extends Application {
 	private static Scene scene;
 
 	@Override
-	public void start(Stage primaryStage) {
-		try {
-			Scene scene = new Scene(loadFXML("sample"), 400, 275);
-			scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public void start(Stage stage) throws IOException {
+		scene = new Scene(loadFXML("sample"), 640, 480/2);
+
+		stage.setScene(scene);
+		stage.show();
 	}
 
 	static void setRoot(String fxml) throws IOException {
@@ -38,7 +34,7 @@ public class App extends Application {
 	}
 
 	public static void main(String[] args) {
-		launch(args);
+		launch();
 	}
 
 }
