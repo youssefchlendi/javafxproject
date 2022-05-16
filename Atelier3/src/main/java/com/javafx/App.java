@@ -29,11 +29,49 @@ public class App extends Application {
         VBox vBox = new VBox();
         HBox hb1 = new HBox();
         HBox hb2 = new HBox();
+        HBox hb3 = new HBox();
+
+        Label l1 = new Label("Enter the username");
+        TextField tf1 = new TextField();
+        Label l2 = new Label("Enter the password");
+        TextField tf2 = new TextField();
+        tf1.setPrefColumnCount(10);
+        Label l3 = new Label("");
+        Button b1 = new Button("Login");
+        hb1.getChildren().addAll(l1, tf1);
+        hb1.setSpacing(10);
+        hb1.setPadding(new Insets(20));
+        hb2.getChildren().addAll(l2, tf2);
+        hb2.setPadding(new Insets(20));
+        hb2.setSpacing(10);
+        hb3.getChildren().addAll(b1, l3);
+        hb3.setPadding(new Insets(20));
+        hb3.setSpacing(10);
+        vBox.getChildren().addAll(hb1, hb2, hb3);
+        vBox.setPadding(new Insets(20));
+        vBox.setSpacing(10);
+
+        b1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (tf1.getText().equals("admin") && tf2.getText().equals("admin")) {
+                    try {
+                        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+                        scene = new Scene(root, 600, 400);
+                        stage.setScene(scene);
+                        stage.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    l3.setText("Invalid username or password");
+                }
+            }
+        });
 
         Scene scene = new Scene(vBox);
-
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         
-        vBox.getChildren().addAll(hb1, hb2);
 
         stage.setScene(scene);
         stage.show();
