@@ -27,9 +27,9 @@
 				<left>10</left>
 			</Insets>
 		</padding>
-		<Button text="Red" onAction="#red" />
-		<Button text="Green" onAction="#green"/>
-		<Button text="Blue" onAction="#blue"/>
+		<Button fx:id="b1" text="Red" onAction="#colorier" />
+		<Button fx:id="b2"  text="Green" onAction="#colorier"/>
+		<Button fx:id="b3" text="Blue" onAction="#colorier"/>
 	</HBox>
 
 </VBox>
