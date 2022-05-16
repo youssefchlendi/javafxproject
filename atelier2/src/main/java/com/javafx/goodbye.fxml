@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<!-- <?import javafx.scene.layout.padding?> -->
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.sampleController">
+	<!-- TODO Add Nodes -->
+	<HBox spacing="10">
+		<padding>
+			<Insets left="20" right="20" top="20" bottom="20"></Insets>
+		</padding>
+		<Label text="your name " fx:id="lab1"></Label>
+		<TextField fx:id="tfName"></TextField>
+	</HBox>
+	<HBox spacing="10">
+		<padding>
+			<Insets left="20" right="20" top="20" bottom="20">
+			</Insets>
+		</padding>
+		<Button text="Say Goodbye!" onAction="#sayGoodbye"></Button>
+		<Label fx:id="gMessage" id="mess"></Label>
+	</HBox>
+	<HBox spacing="10">
+		<Button text="switch to Hello" onAction="#switchToHello"></Button>
+	</HBox>
+</VBox>
