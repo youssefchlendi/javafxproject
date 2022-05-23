@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<!-- <?import javafx.scene.layout.padding?> -->
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.CheckBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.sampleController">
+
+	<Label>Fruits </Label>
+	<ComboBox fx:id="comboBox" promptText="Choisir uno fruit" onAction="#afficher">
+		<!-- <fx:items>
+			<fx:item>Apple</fx:item>
+			<fx:item>Banana</fx:item>
+			<fx:item>Cherry</fx:item>
+			<fx:item>Grape</fx:item>
+			<fx:item>Kiwi</fx:item>
+			<fx:item>Lemon</fx:item>
+			<fx:item>Mango</fx:item>
+			<fx:item>Orange</fx:item>
+			<fx:item>Peach</fx:item>
+			<fx:item>Pear</fx:item>
+			<fx:item>Pineapple</fx:item>
+			<fx:item>Strawberry</fx:item>
+			<fx:item>Watermelon</fx:item>
+		</fx:items> -->
+	</ComboBox>
+	<!-- <Button fx:id="myButt" text="Afficher" /> -->
+
+	<Label fx:id="message"></Label>
+</VBox>
