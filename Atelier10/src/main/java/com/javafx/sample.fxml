@@ -11,28 +11,34 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.collections.ObservableList?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.sampleController">
-
-	<Label>Fruits </Label>
-	<ComboBox fx:id="comboBox" promptText="Choisir uno fruit" onAction="#afficher">
-		<!-- <fx:items>
-			<fx:item>Apple</fx:item>
-			<fx:item>Banana</fx:item>
-			<fx:item>Cherry</fx:item>
-			<fx:item>Grape</fx:item>
-			<fx:item>Kiwi</fx:item>
-			<fx:item>Lemon</fx:item>
-			<fx:item>Mango</fx:item>
-			<fx:item>Orange</fx:item>
-			<fx:item>Peach</fx:item>
-			<fx:item>Pear</fx:item>
-			<fx:item>Pineapple</fx:item>
-			<fx:item>Strawberry</fx:item>
-			<fx:item>Watermelon</fx:item>
-		</fx:items> -->
-	</ComboBox>
-	<!-- <Button fx:id="myButt" text="Afficher" /> -->
-
-	<Label fx:id="message"></Label>
-</VBox>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.sampleController">
+	<top>
+		<HBox spacing="10">
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10"></Insets>
+			</padding>
+		<TextField fx:id="textField">
+		</TextField>
+		<Button fx:id="butt" text="Ajouter" onAction="#ajouter"></Button>
+		<Button fx:id="butt" text="Supprimer" onAction="#supprimer"></Button>
+		</HBox>
+	</top>
+	<center>
+		<ListView fx:id="listView">
+			<items >
+				<FXCollections fx:factory="observableArrayList">
+						<String fx:value="Item 1"></String>
+						<String fx:value="Item 1"></String>
+						<String fx:value="Item 1"></String>
+				</FXCollections>
+			</items>
+		</ListView>
+	</center>
+</BorderPane>
