@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<!-- <?import javafx.scene.layout.padding?> -->
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.CheckBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.sampleController">
+
+	<Button onAction="#efface" text="Reset it!" />
+	<HBox spacing="20">
+		<padding>
+			<Insets top="10" right="10" bottom="10" left="10" />
+		</padding>
+		<CheckBox text="Cercle" fx:id="cercleCB" />
+		<CheckBox text="Rectangle" fx:id="rectangleCB" />
+		<CheckBox text="Triangle" fx:id="triangleCB" />
+	</HBox>
+	<Button onAction="#show" text="show all"/>
+</VBox>

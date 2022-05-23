@@ -5,6 +5,7 @@ import java.util.function.Function;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -30,6 +31,12 @@ public class sampleController {
             lbl1.setText("Carré = " +String.valueOf(b));
         }catch(Exception e){
             lbl1.setText("Error Pleaase enter a num");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Error");
+            alert.setContentText("Please enter a num");
+            alert.showAndWait();
+            
         }
     }
 }
