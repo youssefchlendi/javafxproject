@@ -22,5 +22,5 @@
 		<CheckBox text="Rectangle" fx:id="rectangleCB" />
 		<CheckBox text="Triangle" fx:id="triangleCB" />
 	</HBox>
-	<Button onAction="#show" text="show all"/>
+	<Button onAction="#affiche" text="show all"/>
 </VBox>

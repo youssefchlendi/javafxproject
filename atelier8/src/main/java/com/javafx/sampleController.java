@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.function.Function;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
@@ -11,20 +12,36 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
 public class sampleController {
-    @FXML
-    private Label ml;
-    @FXML
-    private ToggleGroup filGroup;
 
     @FXML
-    public void app() {
-        // check if filGroup is null
-        if (filGroup.getSelectedToggle() == null) {
-            ml.setText("Please select a radio button");
-            return;
-        } else {
-            ml.setText("You selected " + ((RadioButton) filGroup.getSelectedToggle()).getText());
-            ml.setStyle("-fx-text-fill: "+((RadioButton) filGroup.getSelectedToggle()).getText()+";");
+    CheckBox cercleCB;
+
+    @FXML
+    CheckBox rectangleCB;
+
+    @FXML
+    CheckBox triangleCB;
+
+    @FXML
+    public void efface() {
+        cercleCB.setSelected(false);
+        rectangleCB.setSelected(false);
+        triangleCB.setSelected(false);
+      
+    }
+
+    @FXML
+    public void affiche() {
+        String message = "";
+        if (cercleCB.isSelected()) {
+            message += "cercle ";
         }
+        if (rectangleCB.isSelected()) {
+            message += "rectangle ";
+        }
+        if (triangleCB.isSelected()) {
+            message += "triangle ";
+        }
+        System.out.println(message);
     }
 }
