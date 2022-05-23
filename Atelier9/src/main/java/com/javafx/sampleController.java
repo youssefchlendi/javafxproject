@@ -1,47 +1,42 @@
 package com.javafx;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.function.Function;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
-public class sampleController {
+public class sampleController implements Initializable{
 
     @FXML
-    CheckBox cercleCB;
+    ComboBox<String> comboBox;
 
     @FXML
-    CheckBox rectangleCB;
+    Label message;
+
+    ObservableList<String> list = FXCollections.observableArrayList("Ananas", "Banana", "Cherry", "Grape", "Lemon", "Orange", "Pear", "Strawberry");
+    
+    
 
     @FXML
-    CheckBox triangleCB;
-
-    @FXML
-    public void efface() {
-        cercleCB.setSelected(false);
-        rectangleCB.setSelected(false);
-        triangleCB.setSelected(false);
-      
+    public void afficher(){
+        System.out.println(comboBox.getSelectionModel().getSelectedItem());
+        message.setText("Selected item"+comboBox.getSelectionModel().getSelectedItem());
     }
 
-    @FXML
-    public void affiche() {
-        String message = "";
-        if (cercleCB.isSelected()) {
-            message += "cercle ";
-        }
-        if (rectangleCB.isSelected()) {
-            message += "rectangle ";
-        }
-        if (triangleCB.isSelected()) {
-            message += "triangle ";
-        }
-        System.out.println(message);
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        comboBox.setItems(list);
     }
 }
