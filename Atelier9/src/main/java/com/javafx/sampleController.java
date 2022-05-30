@@ -25,7 +25,7 @@ public class sampleController implements Initializable{
     @FXML
     Label message;
 
-    ObservableList<String> list = FXCollections.observableArrayList("Ananas", "Banana", "Cherry", "Grape", "Lemon", "Orange", "Pear", "Strawberry");
+    ObservableList<String> list = FXCollections.observableArrayList("zarzis", "sfax", "bizerte","kef");
     
     
 
